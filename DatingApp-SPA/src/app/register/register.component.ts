@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
       console.log("Registration Successful.");
     }, error=>{
       console.log("Registration Failed!");
+      console.log(error);
     })
   }
 

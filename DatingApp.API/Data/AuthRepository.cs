@@ -26,7 +26,10 @@ namespace DatingApp.API.Data
 
             //check the password against the password stored in thhe database
             if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            {
                 return null;
+                //throw new Exception("Password not correct");
+            }
 
             return user;
         }
