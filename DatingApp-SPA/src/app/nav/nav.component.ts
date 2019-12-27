@@ -10,7 +10,11 @@ import { AlertifyService } from '../_services/alertify.service';
 export class NavComponent implements OnInit {
   // model: any = {username:"", password:""};
   model: any = {};
-
+  items: string[] = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'
+  ];
   constructor(private authService: AuthService, private alertify: AlertifyService) { }
 
   ngOnInit() {
