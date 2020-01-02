@@ -5,10 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191229143259_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20191229143259_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20200101141917_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20200101141917_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20200101144253_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20200101144253_ExtendedUserClass.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
