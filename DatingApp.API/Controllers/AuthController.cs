@@ -41,7 +41,7 @@ namespace DatingApp.API.Controllers
 
             var userToCreate = new User
             {
-                UserName = userForRegisterDto.Username
+                Username = userForRegisterDto.Username
             };
 
             var createdUser = await _authRepo.Register(userToCreate, userForRegisterDto.Password);
@@ -53,7 +53,7 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
 
-            User userFromRepo = await _authRepo.Login(userForLoginDto.UserName.ToLower(), userForLoginDto.Password);
+            User userFromRepo = await _authRepo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
             if (userFromRepo == null)
                 return Unauthorized();
@@ -62,7 +62,7 @@ namespace DatingApp.API.Controllers
             Claim[] claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.UserName)
+                new Claim(ClaimTypes.Name, userFromRepo.Username)
             };
 
             //key to sign the token (hashed) stored in appsettings file

@@ -32,7 +32,7 @@ namespace DatingApp.API.Data
                 lstUser[i].PasswordHash = passwordHash;
                 lstUser[i].PasswordSalt = passwordSalt;
 
-                lstUser[i].UserName = lstUser[i].UserName.ToLower();
+                lstUser[i].Username = lstUser[i].Username.ToLower();
 
                 
                 _context.Add(lstUser[i]);

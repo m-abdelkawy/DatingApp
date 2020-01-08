@@ -11,6 +11,8 @@
     <Compile Remove="Migrations\20200101141917_ExtendedUserClass.Designer.cs" />
     <Compile Remove="Migrations\20200101144253_ExtendedUserClass.cs" />
     <Compile Remove="Migrations\20200101144253_ExtendedUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20200102143003_userNameCaseModified.cs" />
+    <Compile Remove="Migrations\20200102143003_userNameCaseModified.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
